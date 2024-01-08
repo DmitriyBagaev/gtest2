@@ -1,0 +1,178 @@
+cmake_minimum_required(VERSION 3.27)
+project(gtest2)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(app)
+include_directories(external/googletest/googlemock/include)
+include_directories(external/googletest/googlemock/include/gmock)
+include_directories(external/googletest/googlemock/include/gmock/internal)
+include_directories(external/googletest/googlemock/include/gmock/internal/custom)
+include_directories(external/googletest/googlemock/test)
+include_directories(external/googletest/googletest/include)
+include_directories(external/googletest/googletest/include/gtest)
+include_directories(external/googletest/googletest/include/gtest/internal)
+include_directories(external/googletest/googletest/include/gtest/internal/custom)
+include_directories(external/googletest/googletest/samples)
+include_directories(external/googletest/googletest/src)
+include_directories(external/googletest/googletest/test)
+include_directories(external/googletest/googletest/xcode/Samples/FrameworkSample)
+include_directories(tests)
+
+add_executable(gtest2
+        app/main.c
+        app/myfunc.c
+        app/myfunc.h
+        external/googletest/googlemock/include/gmock/internal/custom/gmock-generated-actions.h
+        external/googletest/googlemock/include/gmock/internal/custom/gmock-matchers.h
+        external/googletest/googlemock/include/gmock/internal/custom/gmock-port.h
+        external/googletest/googlemock/include/gmock/internal/gmock-generated-internal-utils.h
+        external/googletest/googlemock/include/gmock/internal/gmock-internal-utils.h
+        external/googletest/googlemock/include/gmock/internal/gmock-port.h
+        external/googletest/googlemock/include/gmock/gmock-actions.h
+        external/googletest/googlemock/include/gmock/gmock-cardinalities.h
+        external/googletest/googlemock/include/gmock/gmock-generated-actions.h
+        external/googletest/googlemock/include/gmock/gmock-generated-function-mockers.h
+        external/googletest/googlemock/include/gmock/gmock-generated-matchers.h
+        external/googletest/googlemock/include/gmock/gmock-generated-nice-strict.h
+        external/googletest/googlemock/include/gmock/gmock-matchers.h
+        external/googletest/googlemock/include/gmock/gmock-more-actions.h
+        external/googletest/googlemock/include/gmock/gmock-more-matchers.h
+        external/googletest/googlemock/include/gmock/gmock-spec-builders.h
+        external/googletest/googlemock/include/gmock/gmock.h
+        external/googletest/googlemock/src/gmock-all.cc
+        external/googletest/googlemock/src/gmock-cardinalities.cc
+        external/googletest/googlemock/src/gmock-internal-utils.cc
+        external/googletest/googlemock/src/gmock-matchers.cc
+        external/googletest/googlemock/src/gmock-spec-builders.cc
+        external/googletest/googlemock/src/gmock.cc
+        external/googletest/googlemock/src/gmock_main.cc
+        external/googletest/googlemock/test/gmock-actions_test.cc
+        external/googletest/googlemock/test/gmock-cardinalities_test.cc
+        external/googletest/googlemock/test/gmock-generated-actions_test.cc
+        external/googletest/googlemock/test/gmock-generated-function-mockers_test.cc
+        external/googletest/googlemock/test/gmock-generated-internal-utils_test.cc
+        external/googletest/googlemock/test/gmock-generated-matchers_test.cc
+        external/googletest/googlemock/test/gmock-internal-utils_test.cc
+        external/googletest/googlemock/test/gmock-matchers_test.cc
+        external/googletest/googlemock/test/gmock-more-actions_test.cc
+        external/googletest/googlemock/test/gmock-nice-strict_test.cc
+        external/googletest/googlemock/test/gmock-port_test.cc
+        external/googletest/googlemock/test/gmock-spec-builders_test.cc
+        external/googletest/googlemock/test/gmock_all_test.cc
+        external/googletest/googlemock/test/gmock_ex_test.cc
+        external/googletest/googlemock/test/gmock_leak_test_.cc
+        external/googletest/googlemock/test/gmock_link2_test.cc
+        external/googletest/googlemock/test/gmock_link_test.cc
+        external/googletest/googlemock/test/gmock_link_test.h
+        external/googletest/googlemock/test/gmock_output_test_.cc
+        external/googletest/googlemock/test/gmock_stress_test.cc
+        external/googletest/googlemock/test/gmock_test.cc
+        external/googletest/googletest/codegear/gtest_all.cc
+        external/googletest/googletest/codegear/gtest_link.cc
+        external/googletest/googletest/include/gtest/internal/custom/gtest-port.h
+        external/googletest/googletest/include/gtest/internal/custom/gtest-printers.h
+        external/googletest/googletest/include/gtest/internal/custom/gtest.h
+        external/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h
+        external/googletest/googletest/include/gtest/internal/gtest-filepath.h
+        external/googletest/googletest/include/gtest/internal/gtest-internal.h
+        external/googletest/googletest/include/gtest/internal/gtest-linked_ptr.h
+        external/googletest/googletest/include/gtest/internal/gtest-param-util-generated.h
+        external/googletest/googletest/include/gtest/internal/gtest-param-util.h
+        external/googletest/googletest/include/gtest/internal/gtest-port-arch.h
+        external/googletest/googletest/include/gtest/internal/gtest-port.h
+        external/googletest/googletest/include/gtest/internal/gtest-string.h
+        external/googletest/googletest/include/gtest/internal/gtest-tuple.h
+        external/googletest/googletest/include/gtest/internal/gtest-type-util.h
+        external/googletest/googletest/include/gtest/gtest-death-test.h
+        external/googletest/googletest/include/gtest/gtest-message.h
+        external/googletest/googletest/include/gtest/gtest-param-test.h
+        external/googletest/googletest/include/gtest/gtest-printers.h
+        external/googletest/googletest/include/gtest/gtest-spi.h
+        external/googletest/googletest/include/gtest/gtest-test-part.h
+        external/googletest/googletest/include/gtest/gtest-typed-test.h
+        external/googletest/googletest/include/gtest/gtest.h
+        external/googletest/googletest/include/gtest/gtest_pred_impl.h
+        external/googletest/googletest/include/gtest/gtest_prod.h
+        external/googletest/googletest/samples/prime_tables.h
+        external/googletest/googletest/samples/sample1.cc
+        external/googletest/googletest/samples/sample1.h
+        external/googletest/googletest/samples/sample10_unittest.cc
+        external/googletest/googletest/samples/sample1_unittest.cc
+        external/googletest/googletest/samples/sample2.cc
+        external/googletest/googletest/samples/sample2.h
+        external/googletest/googletest/samples/sample2_unittest.cc
+        external/googletest/googletest/samples/sample3-inl.h
+        external/googletest/googletest/samples/sample3_unittest.cc
+        external/googletest/googletest/samples/sample4.cc
+        external/googletest/googletest/samples/sample4.h
+        external/googletest/googletest/samples/sample4_unittest.cc
+        external/googletest/googletest/samples/sample5_unittest.cc
+        external/googletest/googletest/samples/sample6_unittest.cc
+        external/googletest/googletest/samples/sample7_unittest.cc
+        external/googletest/googletest/samples/sample8_unittest.cc
+        external/googletest/googletest/samples/sample9_unittest.cc
+        external/googletest/googletest/src/gtest-all.cc
+        external/googletest/googletest/src/gtest-death-test.cc
+        external/googletest/googletest/src/gtest-filepath.cc
+        external/googletest/googletest/src/gtest-internal-inl.h
+        external/googletest/googletest/src/gtest-port.cc
+        external/googletest/googletest/src/gtest-printers.cc
+        external/googletest/googletest/src/gtest-test-part.cc
+        external/googletest/googletest/src/gtest-typed-test.cc
+        external/googletest/googletest/src/gtest.cc
+        external/googletest/googletest/src/gtest_main.cc
+        external/googletest/googletest/test/gtest-death-test_ex_test.cc
+        external/googletest/googletest/test/gtest-death-test_test.cc
+        external/googletest/googletest/test/gtest-filepath_test.cc
+        external/googletest/googletest/test/gtest-linked_ptr_test.cc
+        external/googletest/googletest/test/gtest-listener_test.cc
+        external/googletest/googletest/test/gtest-message_test.cc
+        external/googletest/googletest/test/gtest-options_test.cc
+        external/googletest/googletest/test/gtest-param-test2_test.cc
+        external/googletest/googletest/test/gtest-param-test_test.cc
+        external/googletest/googletest/test/gtest-param-test_test.h
+        external/googletest/googletest/test/gtest-port_test.cc
+        external/googletest/googletest/test/gtest-printers_test.cc
+        external/googletest/googletest/test/gtest-test-part_test.cc
+        external/googletest/googletest/test/gtest-tuple_test.cc
+        external/googletest/googletest/test/gtest-typed-test2_test.cc
+        external/googletest/googletest/test/gtest-typed-test_test.cc
+        external/googletest/googletest/test/gtest-typed-test_test.h
+        external/googletest/googletest/test/gtest-unittest-api_test.cc
+        external/googletest/googletest/test/gtest_all_test.cc
+        external/googletest/googletest/test/gtest_break_on_failure_unittest_.cc
+        external/googletest/googletest/test/gtest_catch_exceptions_test_.cc
+        external/googletest/googletest/test/gtest_color_test_.cc
+        external/googletest/googletest/test/gtest_env_var_test_.cc
+        external/googletest/googletest/test/gtest_environment_test.cc
+        external/googletest/googletest/test/gtest_filter_unittest_.cc
+        external/googletest/googletest/test/gtest_help_test_.cc
+        external/googletest/googletest/test/gtest_list_tests_unittest_.cc
+        external/googletest/googletest/test/gtest_main_unittest.cc
+        external/googletest/googletest/test/gtest_no_test_unittest.cc
+        external/googletest/googletest/test/gtest_output_test_.cc
+        external/googletest/googletest/test/gtest_pred_impl_unittest.cc
+        external/googletest/googletest/test/gtest_premature_exit_test.cc
+        external/googletest/googletest/test/gtest_prod_test.cc
+        external/googletest/googletest/test/gtest_repeat_test.cc
+        external/googletest/googletest/test/gtest_shuffle_test_.cc
+        external/googletest/googletest/test/gtest_sole_header_test.cc
+        external/googletest/googletest/test/gtest_stress_test.cc
+        external/googletest/googletest/test/gtest_throw_on_failure_ex_test.cc
+        external/googletest/googletest/test/gtest_throw_on_failure_test_.cc
+        external/googletest/googletest/test/gtest_uninitialized_test_.cc
+        external/googletest/googletest/test/gtest_unittest.cc
+        external/googletest/googletest/test/gtest_xml_outfile1_test_.cc
+        external/googletest/googletest/test/gtest_xml_outfile2_test_.cc
+        external/googletest/googletest/test/gtest_xml_output_unittest_.cc
+        external/googletest/googletest/test/production.cc
+        external/googletest/googletest/test/production.h
+        external/googletest/googletest/xcode/Samples/FrameworkSample/widget.cc
+        external/googletest/googletest/xcode/Samples/FrameworkSample/widget.h
+        external/googletest/googletest/xcode/Samples/FrameworkSample/widget_test.cc
+        tests/fibonachi_test.h
+        tests/main.cpp
+        tests/tst_stdout.h
+        tests/tst_test1.h
+        tests/squares_test.h)

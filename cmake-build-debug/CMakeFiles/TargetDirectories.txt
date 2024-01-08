@@ -1,0 +1,3 @@
+/Users/dmitriybagaev/Library/Mobile Documents/com~apple~CloudDocs/Study/ПетрГУ/4 курс/1 семестр/Тестирование программного обеспечения/gtest2/cmake-build-debug/CMakeFiles/gtest2.dir
+/Users/dmitriybagaev/Library/Mobile Documents/com~apple~CloudDocs/Study/ПетрГУ/4 курс/1 семестр/Тестирование программного обеспечения/gtest2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dmitriybagaev/Library/Mobile Documents/com~apple~CloudDocs/Study/ПетрГУ/4 курс/1 семестр/Тестирование программного обеспечения/gtest2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
